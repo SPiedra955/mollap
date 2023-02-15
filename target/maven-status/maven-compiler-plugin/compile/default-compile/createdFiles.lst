@@ -1,0 +1,10 @@
+edu\craptocraft\clients\Client.class
+edu\craptocraft\targets\Target.class
+edu\craptocraft\filtres\Filtre.class
+edu\craptocraft\App.class
+edu\craptocraft\filtres\Autoritzacio.class
+edu\craptocraft\administrador\Tasques.class
+edu\craptocraft\filtres\Autenticacio.class
+edu\craptocraft\clients\Mollap.class
+edu\craptocraft\administrador\ProgramadorTasques.class
+edu\craptocraft\targets\Vehicle.class
