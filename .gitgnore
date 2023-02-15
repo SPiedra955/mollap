@@ -1,13 +1,6 @@
-## Common files
-
-
-.vscode
-
-## Maven
-
+# Maven
 target/
-./target
 
-## Java
 
-*.jar
+# VSCode
+.vscode
