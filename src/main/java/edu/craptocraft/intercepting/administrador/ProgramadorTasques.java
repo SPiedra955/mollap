@@ -1,6 +1,7 @@
-package edu.craptocraft.administrador;
-import edu.craptocraft.filtres.Filtre;
-import edu.craptocraft.targets.*;
+package edu.craptocraft.intercepting.administrador;
+
+import edu.craptocraft.intercepting.filtres.Filtre;
+import edu.craptocraft.intercepting.targets.Target;
 
 public class ProgramadorTasques {
 
@@ -19,9 +20,8 @@ public class ProgramadorTasques {
         getTasques().afegirTasca(tasca);
     }
 
-    public void executarTasques(String missatge){
-        tasques.execucio(missatge);
+    public void executarTasques(String sms){
+        tasques.execucio(sms);
     }
-
-    
 }
+

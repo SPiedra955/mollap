@@ -1,12 +1,15 @@
 package edu.craptocraft;
 
-import edu.craptocraft.administrador.ProgramadorTasques;
-import edu.craptocraft.clients.Mollap;
-import edu.craptocraft.filtres.Autenticacio;
-import edu.craptocraft.filtres.Autoritzacio;
-import edu.craptocraft.targets.Vehicle;
+import edu.craptocraft.intercepting.administrador.ProgramadorTasques;
+import edu.craptocraft.intercepting.clients.Mollapp;
+import edu.craptocraft.intercepting.filtres.Autenticacio;
+import edu.craptocraft.intercepting.filtres.Autoritzacio;
+import edu.craptocraft.intercepting.targets.Vehicle;
 
-
+/**
+ * Hello world!
+ *
+ */
 public final class App {
     public static void main(String[] args) {
 
@@ -30,7 +33,7 @@ public final class App {
          * executi les tasques programades i
          * enviï el misstage al sistema.
          */
-        Mollap mollapp = new Mollap();
+        Mollapp mollapp = new Mollapp();
         mollapp.setProgramadorTasques(programadorTasques);
         mollapp.enviarPeticio("Francesc");
     }
