@@ -1,4 +1,4 @@
-package edu.craptocraft.filtres;
+package edu.craptocraft.intercepting.filtres;
 
 public class Autoritzacio implements Filtre{
 
@@ -6,8 +6,7 @@ public class Autoritzacio implements Filtre{
 
     @Override
     public void execucio(String id){
-        System.out.println("Autoriztació OK per a : " + id);
-
+        System.out.println("Autorización OK para " + id);
     }
 
     

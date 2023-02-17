@@ -1,18 +1,18 @@
-package edu.craptocraft.administrador;
+package edu.craptocraft.intercepting.administrador;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import edu.craptocraft.filtres.Filtre;
-import edu.craptocraft.targets.Target;
+import edu.craptocraft.intercepting.filtres.Filtre;
+import edu.craptocraft.intercepting.targets.Target;
 
 public class Tasques {
 
     private List<Filtre> tasques = new ArrayList<>();
     private Optional<Target> target;
 
-    Tasques(){};
+    public Tasques(){};
 
     public List<Filtre> getTasques(){
         return this.tasques;
@@ -32,11 +32,11 @@ public class Tasques {
     
     public void execucio(String missatge){
 
-        getTasques().stream().forEach(sms -> sms.execucio(missatge));
-        if(getTarget().isPresent()){
-            getTarget().get().execucio(missatge);;
-        }else{
-            System.out.println("target sense afegir al sistema");
+        if(getTarget().isEmpty()){
+            System.out.println("Sense vehicles per assignar");
+        } else {
+            getTasques().stream().forEach(ordre -> ordre.execucio(missatge));
+            getTarget().get().execucio(missatge);
         }
-    }
+    }  
 }
